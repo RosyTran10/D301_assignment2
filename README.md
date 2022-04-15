@@ -12,7 +12,7 @@ The following are all the steps you need to follow:
 Python is the must application to run the program. You can download install application [here](https://www.python.org/downloads/).
 
 In the program, we use Pandas and Numpy Dictionary. To check that they are available or not:
-1. Go to C:\Users\"your account"\AppData\Local\Microsoft\WindowsApps which contain the file "python.exe".
+1. Go to C:\Users\\"your account"\AppData\Local\Microsoft\WindowsApps which contain the file "python.exe".
 2. Replace the path with "cmd" to call Command prompt.
 3. Type "pip install pandas" to install pandas. Type "pip install numpy" to install numpy.
 
