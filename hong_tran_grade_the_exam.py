@@ -8,11 +8,6 @@ class6 = pd.read_csv('https://drive.google.com/uc?export=download&id=1NdR4432-NP
 class7 = pd.read_csv('https://drive.google.com/uc?export=download&id=1hQVk49A8Xv_60SKk1-2YD7JOTSkXskjY', sep = " ", header=None)
 class8 = pd.read_csv('https://drive.google.com/uc?export=download&id=1TfCgkYvnSkJg12ixOiei_f8QJ9rqLCvP', sep = " ", header=None)
 
-
-# In[41]:
-
-
-# open the requested file (Sử dụng exception)
 fileset = [class1, class2, class3, class4, class5, class6, class7, class8]
 try:
     filename = int(input('Enter the class number (i.e.1,2,3,...): class'))
@@ -24,12 +19,6 @@ try:
 except:
     print('It is not a class number.') # in case of not integers
 
-
-# In[42]:
-
-
-# TASK 2
-# create numpy of your file
 import numpy as np
 A = np.array(yourfile)
 row, column = A.shape
@@ -72,11 +61,6 @@ print('Total valid lines of data: ', row - len(check))
 print('Total invalid lines of data: ', len(check))
 
 
-# In[44]:
-
-
-# TASK 3
-# count point of whole class, except for invalid lines
 answer_key = ['B','A','D','D','C','B','D','A','C','C','D','B','A',
               'B','A','C','B','D','A','C','A','A','B','D','D']
 point = []
@@ -105,10 +89,6 @@ while i < row:
     i = i + 1
 
 
-# In[45]:
-
-
-# print report (Tiêu chí 3)
 df1 = pd.DataFrame(point, dtype=int) # pandas 2
 df1.columns = ['Point']
 print('Total student of high scores: ', sum(df1.Point > 80))
@@ -140,11 +120,6 @@ print('Question that most people answer incorrectly (Question No. - People No. -
       indices, ' - ', max(incorrect), ' - ', round(max(incorrect)/row,3))
 
 
-# In[46]:
-
-
-# TASK 4
-# create report files
 class1_grades = 'class1_grades.txt'
 class2_grades = 'class2_grades.txt'
 class3_grades = 'class3_grades.txt'
@@ -158,10 +133,6 @@ reportset = [class1_grades,class2_grades,class3_grades,class4_grades,
 yourreport = reportset[filename-1]
 
 
-# In[47]:
-
-
-# extract the list of grade (Tiêu chí 4)
 i = 0
 result = []
 while i < row:
